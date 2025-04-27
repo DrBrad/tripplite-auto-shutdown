@@ -1,0 +1,13 @@
+[Unit]
+Description=UPS Monitoring Script
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /path/to/your/ups.sh
+Restart=always
+User=your-username
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
