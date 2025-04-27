@@ -72,3 +72,14 @@ sudo chmod 0666 /dev/bus/usb/003/012
 ```
 sudo upsdrvctl start
 ```
+
+Service
+====
+If you want to make this a service you can do:
+
+```
+sudo cp ups-monitor.service /etc/systemd/system/ups-monitor.service
+sudo systemctl daemon-reload
+sudo systemctl enable ups-monitor.service
+sudo systemctl start ups-monitor.service
+```
